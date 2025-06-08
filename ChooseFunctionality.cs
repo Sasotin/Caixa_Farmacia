@@ -8,12 +8,12 @@
             while (running)
             {
                 Utilities.Dialogues("""
-
+                    ------------------------------------
                     ### SELECIONE UMA FUNCIONALIDADE ###
                     1. Medicametos.
                     2. Vendas.
                     3. Sair.
-
+                    ------------------------------------
                     """, false);
 
                 var option = Console.ReadLine();
@@ -40,14 +40,14 @@
             while (true)
             {
                 Utilities.Dialogues("""
-
+                    ----------------------------
                     ### SELECIONE UMA OPÇÃO ###
                     1. Cadastrar Medicametos.
                     2. Atualizar Medicametos.
                     3. Listar Medicametos.
                     4. Remover Medicametos.
                     5. Sair.
-
+                    ----------------------------
                     """, false);
 
                 var option = Console.ReadLine();
@@ -70,7 +70,6 @@
                     default:
                         Utilities.ErrorMessage("OPÇÃO INVÁLIDA!");
                         break;
-
                 }
             }
         }
@@ -80,13 +79,13 @@
             while (true)
             {
                 Utilities.Dialogues("""
-
+                    ----------------------------
                     ### SELECIONE UMA OPÇÃO ###
                     1. Realizar Venda.
                     2. Histórico de vendas.
                     3. Sair.
-
-                    """,false);
+                    ----------------------------
+                    """, false);
 
                 var option = Console.ReadLine();
                 switch (option)

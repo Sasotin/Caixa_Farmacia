@@ -9,17 +9,18 @@ namespace Caixa_Farmacia
             DateOnly dateOfSale = DateOnly.FromDateTime(DateTime.Now);
             string codeInput = DataInput.InputString("Inisira o código do medicamento: ");
             Medicines medicineFound = Lists.listOfMedicines.Find(m => m.Code == codeInput);
-            if (medicineFound.ExpirationDate <= dateOfSale)
-            {
-                Utilities.ErrorMessage("MEDICAMENTO VENCIDO. VENDA CANCELADA!");
-                return;
-            }
-            else if (medicineFound.ExpirationDate > dateOfSale && medicineFound.ExpirationDate <= dateOfSale.AddDays(30))
-            {
-                Utilities.Dialogues($"\nMedicamento próximo do vencimento ({medicineFound.ExpirationDate})!\n", false, ConsoleColor.DarkYellow);
-            }
+            
             if (medicineFound != null)
             {
+                if (medicineFound.ExpirationDate <= dateOfSale)
+                {
+                    Utilities.ErrorMessage("MEDICAMENTO VENCIDO. VENDA CANCELADA!");
+                    return;
+                }
+                else if (medicineFound.ExpirationDate > dateOfSale && medicineFound.ExpirationDate <= dateOfSale.AddDays(30))
+                {
+                    Utilities.Dialogues($"\nMedicamento próximo do vencimento ({medicineFound.ExpirationDate})!\n", false, ConsoleColor.DarkYellow);
+                }
                 Utilities.Dialogues($"""
                 -------------------------------------------
                 ### MEDICAMENTO ENCONTRADO! ###

@@ -2,6 +2,12 @@
 {
     internal class DataInput
     {
+        /// <summary>
+        /// Recebe uma string se 
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="error"></param>
+        /// <returns></returns>
         public static string InputString(string message, string error = "CAMPO OBRIGATÓRIO!")
         {
             string input;
