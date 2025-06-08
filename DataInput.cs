@@ -3,11 +3,11 @@
     internal class DataInput
     {
         /// <summary>
-        /// Recebe uma string se 
+        /// Recebe uma string não null/empty.
         /// </summary>
-        /// <param name="message"></param>
-        /// <param name="error"></param>
-        /// <returns></returns>
+        /// <param name="message"> Menssagem de interação. </param>
+        /// <param name="error"> Mensagem de erro caso a string seja null/empty. </param>
+        /// <returns> Retorna a string recebida. </returns>
         public static string InputString(string message, string error = "CAMPO OBRIGATÓRIO!")
         {
             string input;
@@ -20,6 +20,11 @@
             return input;
         }
 
+        /// <summary>
+        /// Recebe uma string e retorna um int.
+        /// </summary>
+        /// <param name="message"> Mensagem de interação. </param>
+        /// <returns> Retorna a string convertida em interiro. </returns>
         public static int InputInt(string message)
         {
             int value;
@@ -35,6 +40,11 @@
             return value;
         }
 
+        /// <summary>
+        /// Recebe uma string e retorna um double.
+        /// </summary>
+        /// <param name="message"> Mensagem de interação. </param>
+        /// <returns> Retorna a string convertida em double. </returns>
         public static double InputDouble(string message)
         {
             double unitPrice;
@@ -50,6 +60,11 @@
             return unitPrice;
         }
 
+        /// <summary>
+        /// Recebe uma string e retorna para DateOnly.
+        /// </summary>
+        /// <param name="message"> Mensagem de interação. </param>
+        /// <returns> Retorna a string convertida em DateOnly. </returns>
         public static DateOnly InputDateOnly(string message)
         {
             DateOnly expirationDate;

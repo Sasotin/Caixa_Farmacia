@@ -4,6 +4,13 @@ namespace Caixa_Farmacia
 {
     internal class SaleOfMedicines
     {
+        /// <summary>
+        /// Permite ao usuário vender medicamentos previamente cadastrados.
+        /// </summary>
+        /// <remarks> Esse método pesquisa o medicamento pelo código e verifica se existe, se existir, verifica se já expirou.
+        /// A venda de medicamentos expirados é bloqueada.
+        /// O calculo do valor total é feito após a quantidade ser inserida, após isso uma mensagem de confirmação de venda é exibida.
+        /// </remarks>
         public static void SaleMecidines()
         {
             DateOnly dateOfSale = DateOnly.FromDateTime(DateTime.Now);

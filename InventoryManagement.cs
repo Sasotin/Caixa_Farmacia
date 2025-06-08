@@ -2,6 +2,13 @@
 {
     internal class InventoryManagement
     {
+        /// <summary>
+        /// Cadastra medicamentos novos na lista/json.
+        /// </summary>
+        /// <remarks> Esse método invoca métodos de DataInput para receber strings e validar/converter a entrada.
+        /// Também invoca um método que atribui um código unico ao medicamento.
+        /// Depois de cadastrado, os dados do medicamento são salvos no .json e exibidos ao usuário.
+        /// </remarks>
         public static void RegisterMedicines()
         {
             string name = DataInput.InputString("Insira o nome do medicamento: ");
@@ -26,6 +33,12 @@
             return;
         }
 
+        /// <summary>
+        /// Exibe os medicamentos dentro da lista/json.
+        /// </summary>
+        /// <remarks> Esse método permite listar os medicamentos cadastrados.
+        /// É possivel listar todos os medicamentos, apenas os com data de veicmento próximo e também os já expirados.
+        /// </remarks>
         public static void ListMedicines()
         {
             while (true)
@@ -57,6 +70,13 @@
             }
         }
 
+        /// <summary>
+        /// Atualiza os detalhes de um medicamento existente na lista/json.
+        /// </summary>
+        /// <remarks>Este método permite que o usuário pesquise um medicamento pelo nome ou código e atualize
+        /// seus detalhes, incluindo nome, quantidade em estoque, preço unitário e data de validade. Se o medicamento for encontrado, seus
+        /// detalhes atuais serão exibidos antes de solicitar atualizações. Se nenhum medicamento correspondente for encontrado, uma mensagem de
+        /// erro será exibida..</remarks>
         public static void UpdateRegistration()
         {
             if (!Validators.ListHasItens()) return;
@@ -90,6 +110,13 @@
             }
         }
 
+        /// <summary>
+        /// Remove um medicamento da lista/json.
+        /// </summary>
+        /// <remarks> 
+        /// Este método permite que o usuário pesquise um medicamento pelo nome ou código e remova-o.
+        /// Se não for nulo, remove o item e salva a lista, se for, retorna uma mensagem de erro.
+        /// </remarks>
         public static void RemoveMedicines()
         {
             if (!Validators.ListHasItens()) return;

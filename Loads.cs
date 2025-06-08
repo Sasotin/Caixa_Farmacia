@@ -2,6 +2,9 @@
 {
     internal class Loads
     {
+        /// <summary>
+        /// Carrega os itens salvos nos arquivos .json para as listas estáticas da classe Lists.cs
+        /// </summary>
         public static void LoadJsonList()
         {
             Lists.listOfMedicines = Repositories.ReposMedicines.LoadList();

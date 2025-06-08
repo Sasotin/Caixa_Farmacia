@@ -19,6 +19,7 @@ namespace Caixa_Farmacia
         /// Carrega a lista que utilizar o método.
         /// </summary>
         /// <returns> Caso o arquivo não exista, retorna uma nova lista. Em caso de ocorrer algum outro erro/exceção, retorna uma nova lista. </returns>
+        /// <remarks> Esse método carrega o arquivo .json contendo os dados para a lista correspondente. </remarks>
         public List<GenericList> LoadList()
         {
             try
@@ -45,7 +46,8 @@ namespace Caixa_Farmacia
         /// <summary>
         /// Salva a lista passada como parâmetro no formato JSON.
         /// </summary>
-        /// <param name="list"> Lista genérica passada como parâmetro para utilizar o método <c>SaveList</c>. </param>
+        /// <param name="list"> Lista genérica passada como parâmetro para utilizar o método SaveList<. </param>
+        /// <remarks> Esse método salva a lista passada como parametro em um arquivo .json para posterior utilização dentro do programa. </remarks>
         public void SaveList(List<GenericList> list)
         {
             try
